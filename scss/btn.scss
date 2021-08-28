@@ -1,0 +1,79 @@
+.btn {
+  background: #e1651f;
+  border-radius: 39px;
+
+  font-family: $poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+
+  text-align: center;
+  color: #ffffff;
+  border: 0;
+  transition: background 0.2s linear;
+  cursor: pointer;
+  transition: all 0.2s linear;
+
+  @media (max-width: 576px) {
+    font-size: 12px;
+    padding: 13px 20px;
+  }
+}
+
+.btn:hover {
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+// To Up button
+
+.toUp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: $orange;
+  display: none;
+  cursor: pointer;
+  animation-name: toupShow;
+  animation-timing-function: linear;
+  animation-duration: 0.4s;
+
+  @media (max-width: 770px) {
+    width: 50px;
+    height: 50px;
+  }
+
+  @media (max-width: 576px) {
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  &.active {
+    display: flex;
+  }
+}
+
+.toUp__icon {
+  width: 50%;
+  transform: rotate(-90deg);
+}
+
+@keyframes toupShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

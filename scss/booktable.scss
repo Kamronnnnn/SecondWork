@@ -1,0 +1,161 @@
+.section--book__table {
+  background: #fff;
+}
+
+.form__blog {
+  text-align: center;
+  width: 100%;
+}
+.forms {
+  margin: 0 auto 28px;
+  max-width: 894px;
+}
+
+.input {
+  padding: 13px 24px;
+  background: rgba(0, 0, 0, 0.04);
+  border: none;
+  margin-bottom: 28px;
+
+  @media (max-width: 576px) {
+    width: 100% !important;
+    margin-bottom: 18px;
+  }
+}
+
+.input:focus {
+  outline: 0;
+}
+
+.input--text,
+.input--email {
+  width: 100%;
+  display: block;
+
+  padding: 13px 0px 13px 24px;
+}
+
+.half__inputs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .input--tel,
+  .input--number,
+  .input--date,
+  .input--time {
+    width: 48.3%;
+  }
+}
+
+.input--number,
+.input--date {
+  text-align: left;
+}
+
+.input--textarea {
+  width: 100%;
+  resize: none;
+}
+
+.input:placeholder {
+  font-family: $poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 160%;
+
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.book__table__btn {
+  padding: 16px 28px;
+  text-decoration: none;
+}
+
+.counter__section {
+  padding: 125px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/assets/img/footer/footer-bg.png') no-repeat center;
+  background-size: cover;
+
+  @media (max-width: 770px) {
+    padding: 80px 0;
+  }
+  @media (max-width: 576px) {
+    padding: 50px 0;
+  }
+}
+
+.counters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.counter__item {
+  width: 23%;
+
+  @media (max-width: 576px) {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 450px) {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+
+.count__num {
+  margin-bottom: 6px;
+
+  font-family: $oleo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 66px;
+  text-align: center;
+
+  color: #ffffff;
+
+  @media (max-width: 770px) {
+    line-height: 1;
+    font-size: 35px;
+  }
+  @media (max-width: 576px) {
+    font-size: 30px;
+  }
+}
+
+.count__text {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+
+  text-align: center;
+
+  color: #ffffff;
+  @media (max-width: 770px) {
+    line-height: 1;
+    font-size: 16px;
+  }
+}
+
+.count__text:after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: $orange;
+  margin: 22px auto 0;
+
+  @media (max-width: 770px) {
+    margin: 18px auto 0;
+    width: 50px;
+  }
+  @media (max-width: 576px) {
+    margin-top: 10px;
+  }
+}

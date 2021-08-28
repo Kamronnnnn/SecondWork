@@ -1,0 +1,128 @@
+@import '../scss/vars';
+@import '../scss/home';
+@import '../scss/btn.scss';
+@import '../scss/sidebar.scss';
+@import '../scss/about';
+@import '../scss/menu';
+@import '../scss/services.scss';
+@import '../scss/testimonials';
+@import '../scss/booktable.scss';
+@import '../scss/footer';
+@import '../scss/modals.scss';
+
+body {
+  font-family: $poppins;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.general__wrapper{
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 120px 0;
+
+  @media (max-width: 1200px) {
+    padding: 80px 0;
+  }
+
+  @media (max-width: 991px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 770px) {
+    padding: 40px 0;
+  }
+}
+
+.section__header {
+  width: 100%;
+  max-width: 527px;
+  margin: 0 auto 70px;
+  text-align: center;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 40px;
+  }
+  @media (max-width: 576px) {
+    margin-bottom: 30px;
+  }
+}
+
+.section--testimonials {
+  .section__title,
+  .section__text {
+    color: #fff;
+  }
+}
+
+.section__title {
+  margin-bottom: 18px;
+  font-family: $oleo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 60px;
+
+  color: $dark;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 7px;
+  }
+  @media (max-width: 991px) {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 30px;
+    margin-bottom: 5px;
+    line-height: 1;
+  }
+}
+
+.section__text {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 160%;
+  /* or 26px */
+
+  text-align: center;
+
+  color: $dark;
+
+  @media (max-width: 770px) {
+    line-height: 1.2;
+  }
+  @media (max-width: 400px) {
+    line-height: 1.1;
+    font-size: 13px;
+  }
+}
+
+.section__text:after {
+  margin: 18px auto;
+  content: '';
+  display: block;
+  width: 128px;
+  height: 3px;
+  background: $orange;
+
+  @media (max-width: 576px) {
+    width: 90px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+}

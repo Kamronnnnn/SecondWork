@@ -1,0 +1,232 @@
+// BookTable modal
+
+.modal__bookTable {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  overflow: auto;
+
+  &.active {
+    display: flex;
+  }
+}
+
+// .modal__bookTable__inner {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+.modal__bookTable__content {
+  padding: 50px 30px;
+  border: 1px solid #000;
+  background: #fff;
+  max-width: 500px;
+  border-radius: 15px;
+  display: none;
+  position: relative;
+  animation-name: bookTableShow;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  overflow: auto;
+
+  @media (max-width: 770px) {
+    padding: 20px 25px;
+    max-width: 400px;
+  }
+
+  @media (max-width: 576px) {
+    padding: 15px 30px;
+    max-width: 330px;
+  }
+
+  @media (max-height: 450px) {
+    height: 300px;
+  }
+
+  &.active {
+    display: block;
+  }
+}
+
+.modal__bookTable__close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 30px;
+  height: 30px;
+  background: $orange;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+.bookTable__modal__close__icon {
+  width: 50%;
+}
+
+.BookTable__modal__title {
+  font-size: 30px;
+  font-family: $oleo;
+
+  &:after {
+    margin: 15px 0;
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: $orange;
+  }
+}
+
+.bookTable__modal__input {
+  width: 100%;
+  padding: 13px 24px;
+  background: rgba(0, 0, 0, 0.04);
+  border: none;
+  margin-bottom: 15px;
+  border-radius: 5px;
+
+  &:focus {
+    outline: none;
+  }
+
+  @media (max-width: 576px) {
+    margin-bottom: 7px;
+  }
+}
+
+.bookTable__modal__submit {
+  font-size: 18px;
+  border-radius: 7px;
+  padding: 12px 40px;
+  background: $orange;
+  color: #fff;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Success modal
+.success__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+}
+
+.success__content {
+  max-width: 500px;
+  padding: 59px 70px;
+  border-radius: 18px;
+  position: relative;
+  background: #fff;
+  text-align: center;
+  display: none;
+
+  animation-name: successOpen;
+  animation-timing-function: ease-out;
+  animation-duration: 0.2s;
+
+  @media (max-width: 576px) {
+    padding: 39px 50px;
+    max-width: 400px;
+  }
+
+  @media (max-width: 450px) {
+    padding: 29px 40px;
+    max-width: 300px;
+  }
+
+  &.active {
+    display: block;
+  }
+}
+
+.success__close__wrapper {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background: $orange;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.success__close__icon {
+  width: 50%;
+}
+.success__photo {
+  width: 100px;
+  margin: 0 auto 20px;
+}
+
+.success__tick__img {
+  width: 100%;
+  display: block;
+}
+
+.success__title {
+  font-size: 30px;
+  font-family: $oleo;
+  margin-bottom: 10px;
+}
+
+.success__text {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+// animations of modals
+
+@keyframes bookTableShow {
+  0% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes successOpen {
+  0% {
+    opacity: 0;
+    margin-right: -50px;
+  }
+
+  100% {
+    margin-right: 0px;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,166 @@
+/* Sidebar 
+==========================*/
+
+.sidebar {
+  width: 600px;
+  height: 100vh;
+  background: #fff;
+
+  position: fixed;
+  top: 0;
+  right: -600px;
+  bottom: 0;
+  z-index: 1001;
+  overflow: auto;
+
+  @media (max-width: 768px) {
+    width: 500px;
+    right: -500px;
+  }
+
+  @media (max-width: 576px) {
+    width: 400px;
+    right: -400px;
+  }
+
+  @media (max-width: 420px) {
+    width: 300px;
+    right: -300px;
+  }
+
+  &.active {
+    right: 0;
+  }
+
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar__inner {
+  padding: 90px 40px 30px;
+
+  @media (max-width: 768px) {
+    padding: 75px 30px 25px;
+  }
+
+  @media (max-width: 420px) {
+    padding: 60px 20px 20px;
+  }
+}
+
+.sidebar__close__wrapper {
+  position: absolute;
+  top: 45px;
+  right: 35px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: $orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar__close__btn {
+  width: 50%;
+}
+
+.sidebar__menu {
+  margin-bottom: 15px;
+  display: none;
+
+  @media (max-width: 770px) {
+    display: block;
+  }
+}
+
+.siderbar__menu__title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-family: $oleo;
+}
+
+.sidebar__menu__links {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__menu__link {
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  display: inline-block;
+
+  &:hover {
+    color: $orange;
+  }
+
+  &.active {
+    color: $orange;
+  }
+}
+
+.sidebar__title {
+  font-family: $oleo;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.sidebar__subtitle {
+  font-size: 14px;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: $orange;
+    margin: 15px 0;
+  }
+}
+
+.sidebar__contact {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.sidebar__contact__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.sidebar__phone__icon {
+  width: 25px;
+  margin-right: 15px;
+}
+
+.sidebar__number {
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar__social__title {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.sidebar__socials {
+  display: flex;
+}
+
+.sidebar__social__item {
+  width: 30px;
+  height: 30px;
+  background: $orange;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.sidebar__social__icon {
+  width: 50%;
+}
